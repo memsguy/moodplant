@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f9f3e7">
+    <title>心情種植</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 心情種植</h1>
+
+        <div id="plant-stage">
+            <img id="plant-image" src="plant_stage_1.png" alt="植物">
+        </div>
+
+        <button id="diary-btn">寫感恩日記</button>
+
+        <div id="diary-section" class="hidden">
+            <textarea id="gratitude-text" placeholder="今天你感恩的事..."></textarea>
+            <button id="save-diary">澆水 🌧️</button>
+        </div>
+
+        <p id="status"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
