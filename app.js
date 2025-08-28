@@ -8,6 +8,7 @@ function showPage(page) {
 }
 
 function waterPlant() {
+  console.log("現在的 stage:", stage);
   const input = document.getElementById("diaryInput").value.trim();
   if (!input) return alert("請先寫下感恩日記！");
 
