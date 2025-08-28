@@ -1,11 +1,10 @@
 {
   "name": "心情種植",
   "short_name": "心情種植",
-  "description": "用感恩日記澆灌，讓植物隨著心情成長 🌱",
-  "start_url": "index.html",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#f9f3e7",
-  "theme_color": "#81b29a",
+  "background_color": "#ffffff",
+  "description": "用感恩日記澆灌心情植物",
   "icons": [
     {
       "src": "icon-192.png",
