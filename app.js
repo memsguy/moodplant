@@ -1,4 +1,4 @@
-let stage = 1; // 植物的成長階段
+let stage = 1;
 let diaryEntries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
 
 function showPage(page) {
@@ -8,24 +8,23 @@ function showPage(page) {
 }
 
 function waterPlant() {
-  console.log("現在的 stage:", stage);
   const input = document.getElementById("diaryInput").value.trim();
   if (!input) return alert("請先寫下感恩日記！");
 
-  // 存日記
   const today = new Date().toISOString().split("T")[0];
   diaryEntries.push({ date: today, content: input });
   localStorage.setItem("diaryEntries", JSON.stringify(diaryEntries));
   document.getElementById("diaryInput").value = "";
 
-  // 植物成長 (循環)
+  // **循环逻辑 / 重生**
   if (stage < 5) {
     stage++;
   } else {
-    stage = 1; // 重生，回到種子
+    stage = 1;
   }
 
   document.getElementById("plantImage").src = `plant_stage_${stage}.png`;
+  console.log("現在的 stage:", stage);
 }
 
 function renderDiary() {
@@ -37,3 +36,7 @@ function renderDiary() {
     list.appendChild(li);
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  showPage('garden');  // 初始显示花園
+});
