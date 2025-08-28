@@ -1,4 +1,4 @@
-let stage = 1;
+let stage = 1; // 植物的成長階段
 let diaryEntries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
 
 function showPage(page) {
