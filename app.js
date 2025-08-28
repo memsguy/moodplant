@@ -21,7 +21,7 @@ function waterPlant() {
   if (stage < 5) {
     stage++;
   } else {
-    stage = 1; // 重生，回到最初狀態
+    stage = 1; // 重生，回到種子
   }
 
   document.getElementById("plantImage").src = `plant_stage_${stage}.png`;
