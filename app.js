@@ -27,6 +27,14 @@ function waterPlant() {
   console.log("現在的 stage:", stage);
 }
 
+function clearDiary() {
+  if (confirm("確定要清除所有日記嗎？")) {
+    diaryEntries = [];
+    localStorage.removeItem("diaryEntries");
+    renderDiary();
+  }
+}
+
 function renderDiary() {
   const list = document.getElementById("diaryList");
   list.innerHTML = "";
