@@ -2,9 +2,13 @@ let stage = 1;
 let diaryEntries = JSON.parse(localStorage.getItem("diaryEntries")) || [];
 
 function showPage(page) {
-  document.getElementById("gardenPage").style.display = (page === 'garden') ? 'block' : 'none';
-  document.getElementById("diaryPage").style.display = (page === 'diary') ? 'block' : 'none';
-  if (page === 'diary') renderDiary();
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  if (page === 'garden') {
+    document.getElementById("gardenPage").classList.add('active');
+  } else if (page === 'diary') {
+    document.getElementById("diaryPage").classList.add('active');
+    renderDiary();
+  }
 }
 
 function waterPlant() {
